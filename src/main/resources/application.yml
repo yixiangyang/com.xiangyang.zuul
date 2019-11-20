@@ -1,0 +1,14 @@
+server:
+  port: 10000
+  ip: localhost
+spring:
+  application:
+   name: xiangyang-service-zuul
+zuul:
+   ratelimit:
+      enabled: true
+#      repository: IN_MEMORY
+      default-policy:
+        limit: 3
+        refresh-interval: 60
+        type: origin
